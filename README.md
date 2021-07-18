@@ -13,10 +13,12 @@ The algorithm essentially simulates all possible turns that any player can do in
 To use the example also given in the blog post, assuming the PC has three possible fields to put their "X" in.
 * Field one leads to a gameover, PC victory.
 * Field two does not end the game and leaves two fields for the Player to take.
+
    Field one leads to a gameover, Player victory.
    Field three does not end the game and leaves one field for the PC to take.  
    Field one leads to a gameover, PC victory.  
 * Field three does not end the game and leaves two fields for the Player to take.
+
    Field one leads to a gameover, Player victory.
    Field two does not end the game and leaves one field for the PC to take.  
    Field one leads to a gameover, Draw. *note this is different than in the blog example, let's talk hypotethically.  
@@ -25,11 +27,14 @@ The PC taking field one is definitely a good result for the PC -> +1
 The PC taking field two has multiple different outcomes.
 * If the player takes field one, the player wins -> -1
 * If the player takes field three, the game goes on.
+
    The PC has to take field one, PC wins -> +1
+
 This result propagates upward, so on the player turn we have two possible outcomes, (+1,-1). As we assume the worst case for player turns the minimum is taken, so Field two is potentially a bad result for the PC overall -> -1
 The PC taking field three again has multiple different outcomes.
 * If the player takes field one, the player wins -> -1
 * If the player takes field two, PC takes field one, Draw -> 0
+
 Again we have two possible outcomes (0,-1) and again we have to assume the worst case. Field three is also a potentially bad result for the PC -1
 
 The PC therefore has three fields to choose from.
