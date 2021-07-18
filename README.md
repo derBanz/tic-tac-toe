@@ -15,6 +15,7 @@ To use the example also given in the blog post, assuming the PC has three possib
 * Field two does not end the game and leaves two fields for the Player to take.
 
    Field one leads to a gameover, Player victory.
+   
    Field three does not end the game and leaves one field for the PC to take.  
    Field one leads to a gameover, PC victory.  
 * Field three does not end the game and leaves two fields for the Player to take.
